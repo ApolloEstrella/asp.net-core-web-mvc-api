@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "LoginConnectionString": "server=(localdb)\\ProjectsV13;Database=LoginInfoDb;Integrated Security=True;MultipleActiveResultSets=true;"
+  }
+}

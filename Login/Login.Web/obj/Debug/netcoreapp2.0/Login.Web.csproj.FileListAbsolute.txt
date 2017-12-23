@@ -1,0 +1,13 @@
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Web.deps.json
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Web.runtimeconfig.json
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Web.runtimeconfig.dev.json
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Web.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Web.pdb
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.csprojResolveAssemblyReference.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.csproj.CoreCompileInputs.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.AssemblyInfoInputs.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.AssemblyInfo.cs
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\obj\Debug\netcoreapp2.0\Login.Web.pdb
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Data.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Web\bin\Debug\netcoreapp2.0\Login.Data.pdb

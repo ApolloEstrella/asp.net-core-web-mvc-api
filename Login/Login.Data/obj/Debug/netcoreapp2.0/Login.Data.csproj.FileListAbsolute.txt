@@ -1,0 +1,15 @@
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Login.Data.deps.json
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Login.Data.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.csprojResolveAssemblyReference.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.csproj.CoreCompileInputs.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.AssemblyInfoInputs.cache
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.AssemblyInfo.cs
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.xml
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Login.Data.pdb
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.dll
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\obj\Debug\netcoreapp2.0\Login.Data.pdb
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Login.Data.runtimeconfig.json
+D:\TestProjects\ASPNetCoreApi\LogIn\Login\Login.Data\bin\Debug\netcoreapp2.0\Login.Data.runtimeconfig.dev.json
