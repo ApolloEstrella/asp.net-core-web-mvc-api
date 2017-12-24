@@ -97,7 +97,7 @@ namespace Login.Web.Controllers
                 //_logger.LogError($"Exception thrown while creating JWT: {ex}");
             }
 
-            return BadRequest("Failed to generate token");
+            return BadRequest("Failed to generate jwt token");
         }
 
 
