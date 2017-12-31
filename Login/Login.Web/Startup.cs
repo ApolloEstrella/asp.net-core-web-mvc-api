@@ -119,9 +119,9 @@ namespace Login.Web
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "http://localhost:3485/",
-                        ValidAudience = "http://localhost:3485/",
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("VERYLONGKEYVALUETHATISSECURE"))
+                        ValidIssuer = _config["TokenIssuer"],
+                        ValidAudience = _config["TokenAudience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["SecurityKey"]))
                     };
                 });
 

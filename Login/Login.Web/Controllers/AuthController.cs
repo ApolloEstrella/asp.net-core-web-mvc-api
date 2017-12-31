@@ -2,6 +2,7 @@
 using Login.Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MyCodeCamp.Filters;
 using System;
@@ -22,11 +23,14 @@ namespace Login.Web.Controllers
 
         private IPasswordHasher<ApplicationUser> _hasher;
 
-        public AuthController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IPasswordHasher<ApplicationUser> hasher)
+        private readonly IConfiguration _configuration;
+
+        public AuthController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IPasswordHasher<ApplicationUser> hasher, IConfiguration configuration)
         {
             this._signInMgr = signInManager;
             this._userMgr = userManager;
             this._hasher = hasher;
+            this._configuration = configuration;
         }
 
         [HttpPost("api/auth/login")]
@@ -72,14 +76,20 @@ namespace Login.Web.Controllers
                                 new Claim(JwtRegisteredClaimNames.Email, user.Email)
                             }.Union(userClaims);
 
-                        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("VERYLONGKEYVALUETHATISSECURE"));
+                        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SecurityKey"]));
+
+
+                        //var symmetricKey = Convert.FromBase64String(_configuration["SecurityKey"]);
+                        //var key = new SymmetricSecurityKey(symmetricKey);
+
+
                         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                         var token = new JwtSecurityToken(
-                          issuer: "http://localhost:3485/",
-                          audience: "http://localhost:3485/",
+                          issuer: _configuration["TokenIssuer"],
+                          audience: _configuration["TokenAudience"],
                           claims: claims,
-                          expires: DateTime.UtcNow.AddSeconds(30),
+                          expires: DateTime.Now.AddHours(1),
                           signingCredentials: creds
                           );
 
