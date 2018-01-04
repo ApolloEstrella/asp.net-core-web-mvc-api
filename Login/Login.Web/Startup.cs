@@ -42,7 +42,8 @@ namespace Login.Web
             {
                 cfg.User.RequireUniqueEmail = true;
             })
-        .AddEntityFrameworkStores<LoginDbContext>();
+        .AddEntityFrameworkStores<LoginDbContext>()
+        .AddDefaultTokenProviders();
 
             services.AddAuthentication(options =>
             {

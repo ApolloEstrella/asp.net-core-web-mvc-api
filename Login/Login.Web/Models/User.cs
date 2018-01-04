@@ -12,5 +12,7 @@ namespace Login.Web.Models
         public string Email { get; set; }
         [MinLength(6)]
         public string Password { get; set; }
+        public string Token { get; set; }
+        public string Id { get; set; }
     }
 }

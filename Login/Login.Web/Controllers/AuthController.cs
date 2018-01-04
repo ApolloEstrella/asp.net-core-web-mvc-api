@@ -89,7 +89,7 @@ namespace Login.Web.Controllers
                           issuer: _configuration["TokenIssuer"],
                           audience: _configuration["TokenAudience"],
                           claims: claims,
-                          expires: DateTime.Now.AddHours(1),
+                          expires: DateTime.Now.AddSeconds(30),
                           signingCredentials: creds
                           );
 
