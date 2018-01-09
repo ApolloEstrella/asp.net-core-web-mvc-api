@@ -53,42 +53,7 @@ namespace Login.Web
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             });
 
-            //services.ConfigureApplicationCookie(config =>
-            //{
-            //    config.Events =
-
-            //      new CookieAuthenticationEvents()
-            //      {
-            //          OnRedirectToLogin = (ctx) =>
-            //          {
-            //              if (ctx.Request.Path.StartsWithSegments("/api") && ctx.Response.StatusCode == 200)
-            //              {
-            //                  ctx.Response.StatusCode = 401;
-            //              }
-
-            //              return Task.CompletedTask;
-            //          },
-            //          OnRedirectToAccessDenied = (ctx) =>
-            //          {
-            //              if (ctx.Request.Path.StartsWithSegments("/api") && ctx.Response.StatusCode == 200)
-            //              {
-            //                  ctx.Response.StatusCode = 403;
-            //              }
-
-            //              return Task.CompletedTask;
-            //          }
-            //      };
-            //});
-
-
-
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //});
-
-
+             
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAnyOrigin",
@@ -105,11 +70,6 @@ namespace Login.Web
 
 
             services.AddScoped<ILoginRepository, LoginRepository>();
-
-            //services.AddAuthorization(options =>
-            //{
-            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build();
-            //});
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -139,25 +99,8 @@ namespace Login.Web
             }
             app.UseCors("AllowAll");
 
-            //app.UseJwtBearerAuthentication(new JwtBearerOptions()
-            //{
-            //    AutomaticAuthenticate = true,
-            //    AutomaticChallenge = true,
-            //    TokenValidationParameters = new TokenValidationParameters()
-            //    {
-            //        ValidIssuer = "http://mycodecamp.org",
-            //        ValidAudience = "http://mycodecamp.org",
-            //        ValidateIssuerSigningKey = true,
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("VERYLONGKEYVALUETHATISSECURE")),
-            //        ValidateLifetime = true
-            //    }
-            //});
-
-            //app.UseAuthentication();
-
             app.UseIdentity();
 
-            //app.UseMvc();
             app.UseMvcWithDefaultRoute();
         }
     }

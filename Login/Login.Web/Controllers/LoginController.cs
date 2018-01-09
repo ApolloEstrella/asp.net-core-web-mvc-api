@@ -85,7 +85,7 @@ namespace Login.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] User userParam, string userid, string token)
         {
-            var signIn = await _signInManager.PasswordSignInAsync(userParam.Email, userParam.Password, false, false);
+            var signIn = await _signInManager.PasswordSignInAsync(userParam.Email, userParam.Password, userParam.KeepMeSignedIn, false);
 
             if (!signIn.Succeeded)
                 ModelState.AddModelError(nameof(userParam), "Email or Password is incorrect !");
@@ -179,7 +179,19 @@ namespace Login.Web.Controllers
             {
                 var identityResult = await _userManager.ResetPasswordAsync(user, userModel.Token, userModel.Password);
                 if (!identityResult.Succeeded)
-                    return BadRequest();                
+                {
+                    //return BadRequest();
+
+                    foreach(var error in identityResult.Errors)
+                    {
+                        ModelState.AddModelError(nameof(userModel), error.Description);
+                    }
+
+                    if (!ModelState.IsValid)
+                    {
+                        return new UnprocessableEntityObjectResult(ModelState);
+                    }
+                }    
             }
             return Ok();
         }

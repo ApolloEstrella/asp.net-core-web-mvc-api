@@ -14,5 +14,6 @@ namespace Login.Web.Models
         public string Password { get; set; }
         public string Token { get; set; }
         public string Id { get; set; }
+        public bool KeepMeSignedIn { get; set; }
     }
 }
